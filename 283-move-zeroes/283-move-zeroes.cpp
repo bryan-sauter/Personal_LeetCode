@@ -6,8 +6,7 @@ public:
         {
             if(nums[i] != 0)
             {
-                swap(nums[i], nums[curSwap]);
-                curSwap++;
+                swap(nums[i], nums[curSwap++]);
             }
         }
     }
