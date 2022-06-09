@@ -6,17 +6,17 @@ public:
         
         while( start < end )
         {
-            if( numbers[start] + numbers[end] == target ) //we found it
+            if( target == numbers[start] + numbers[end] ) //we found it
             {
                 return {start + 1, end + 1};
             }
-            else if( numbers[start] + numbers[end] > target ) //too large shift left
+            else if( target > numbers[start] + numbers[end] ) //too large shift right
             {
-                end--;
+                start++;
             }
             else
             {
-                start++;
+                end--;
             }
         }
         
